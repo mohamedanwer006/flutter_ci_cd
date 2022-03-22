@@ -1,11 +1,11 @@
 pipeline {
     agent any 
     stages {
-        stage('Flutter Doctor') {
-            steps {
-                sh 'flutter doctor -v'
-            }
-        }
+        // stage('Flutter Doctor') {
+        //     steps {
+        //         sh 'flutter doctor -v'
+        //     }
+        // }
         stage('Test') {
                steps {
             sh 'flutter test test/unit_test.dart'
