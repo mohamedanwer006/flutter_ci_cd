@@ -16,6 +16,12 @@ pipeline {
              sh 'flutter build web --release'
         }
         }
+        stage('Production'){
+            steps
+            {
+                sh 'echo deploy test '
+            }
+        }
         stage('flutter clean'){
                steps {
             sh 'flutter clean'
