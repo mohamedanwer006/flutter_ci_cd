@@ -6,11 +6,14 @@ pipeline {
                 sh 'flutter doctor -v'
             }
         }
-        stages('Test') {
+        stage('Test') {
             sh 'flutter test test/unit_test.dart'
         }
         stage('Build web'){
              sh 'flutter build web --release'
+        }
+        stage('flutter clean'){
+            sh 'flutter clean'
         }
     }
 }
